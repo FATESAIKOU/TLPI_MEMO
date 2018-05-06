@@ -8,6 +8,8 @@
 * See the files COPYING.lgpl-v3 and COPYING.gpl-v3 for details.           *
 \*************************************************************************/
 
+/* Listing 3-1 */
+
 /* tlpi_hdr.h
 
    Standard header file used by nearly all of our example programs.
