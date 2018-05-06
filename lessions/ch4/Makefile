@@ -1,12 +1,15 @@
-run: build
-	./t_freopen.build
+OBJECTS = $(patsubst %.c,%.build,$(wildcard *.c))
+
+run: $(OBJECTS)
+	echo $t
+	./$<
 	@echo "Run Done"
 
-build: build_t_freopen
+build: $(OBJECTS)
 	@echo "Build Done"
 
-build_t_freopen: t_freopen.c
-	gcc -o t_freopen.build t_freopen.c
+%.build: %.c
+	gcc -o $@ $<
 
 clean:
-	rm -f t_freopen
+	rm -f *.build
