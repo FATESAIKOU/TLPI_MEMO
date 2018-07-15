@@ -103,7 +103,7 @@ void Write(char *cmd, int fd, char *write_string)
 
 void Seek(char *cmd, int fd, off_t offset)
 {
-    if (lseek(fd, offset, SEEK_SET) == -1)
+    if (lseek(fd, offset, SEEK_CUR) == -1)
         ErrExit("unable to seek.\n");
     printf("%s: seek succeeded\n", cmd);
 }
