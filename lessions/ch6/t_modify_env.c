@@ -10,7 +10,8 @@ main(int argc, char *argv[])
     char **ep;
 
     clearenv(); // Erase entire environment
-    
+
+    putenv("a=2");
     for (i = 1; i < argc; i ++)
         if (putenv(argv[i]) != 0) {
             printf("putenv: %s, error\n", argv[i]);
